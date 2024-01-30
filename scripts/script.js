@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(response => response.json())
             .then(data => {
                 // Verificar se a passagem foi encontrada
-                if (data) {
+                if (data.cpf) {
+                    console.log(data);
                     displayResult(true, data, validationCode);
                 } else {
                     displayResult(false);
